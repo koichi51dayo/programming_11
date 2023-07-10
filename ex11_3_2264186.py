@@ -24,7 +24,7 @@ def print_list(p):
         p=p.next
         
             
-def search(x:int,p):
+def search_delete(x:int,p):
         if p.num==None:
             print("該当者はいません\n")
         elif x==p.num:
@@ -32,7 +32,7 @@ def search(x:int,p):
             q=p.next
             p.num,p.name,p.profile,p.next=q.num,q.name,q.profile,q.next
         else:
-            search(x,p.next)
+            search_delete(x,p.next)
         
 
 p=make_list()
@@ -51,5 +51,5 @@ while True:
     elif p.num==None:
         print("null")
     else:
-        search(x,p.next)
+        search_delete(x,p.next)
         print_list(p)

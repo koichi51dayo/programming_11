@@ -25,4 +25,12 @@ def search(x:int,p:list):
             print("{:>2} {} {}\n".format(p.num,p.name,p.profile))
             break
         p=p.next
-        
+
+make_list()
+while True:
+    x=int(input("探索する背番号を入力してください（０を入力で終了）："))
+    if x==0:
+        break
+    search(x,p)
+print("探索を終了します")
+    
